@@ -1,0 +1,2 @@
+#!/bin/
+gcc -S -masm=intel "$CFILE" -o "${CFILE%.*}.s"
