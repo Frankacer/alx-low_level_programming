@@ -34,7 +34,7 @@ void _print_rev_recursion(char *s)
 		_putchar('\n');
 		return;
 	}
-	_putchar(s - i);
+	_putchar(*(s - i));
 	i++;
 	_print_rev_recursion(s);
 }
