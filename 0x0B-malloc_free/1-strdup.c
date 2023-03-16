@@ -45,7 +45,7 @@ char *_strcpy(char *dest, char *src)
 char *_strdup(char *str)
 {
 	char *s;
-	unsigned int size = _strlen(str);
+	unsigned int size = _strlen(str) + 1;
 
 	if (str == NULL)
 		return (NULL);
