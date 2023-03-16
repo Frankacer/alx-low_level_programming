@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define NULL ((void *)0)
+
 int _isalpha(int c);
 int print_sign(int n);
 int _abs(int i);
