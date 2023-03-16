@@ -44,11 +44,13 @@ char *_strcpy(char *dest, char *src)
  */
 char *_strdup(char *str)
 {
+	char *s;
+	unsigned int size;
+
 	if (str == NULL)
 		return (NULL);
 
-	char *s;
-	unsigned int size = _strlen(str) + 1;
+	size = _strlen(str) + 1;
 
 	/*Allocate dynamic meemory to array*/
 	s = (char *)malloc(size * sizeof(char));
