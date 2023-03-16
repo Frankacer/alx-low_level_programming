@@ -35,5 +35,10 @@ char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
+int _isupper(int c);
+int _isdigit(int c);
+char *_strcat(char *dest, char *src);
+char *_strncat(char *dest, char *src, int n);
+int _strcmp(char *s1, char *s2);
 
 #endif
