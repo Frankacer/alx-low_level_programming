@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 
 	/*Allocate dynamic meemory to array*/
-	arr = char *(malloc(size * sizeof(char)));
+	arr = (char *)malloc(size * sizeof(char));
 
 	/*Condition for unsuccessful allocation*/
 	if (arr == NULL)
