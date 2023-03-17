@@ -38,7 +38,7 @@ char *str_concat(char *s1, char *s2)
 
 	/*calculate string length and check for overflow*/
 	len = _strlen(s1) + _strlen(s2) + 1;
-	if (len <= strlen(s1) || len <= strlen(s2))
+	if (len <= _strlen(s1) || len <= _strlen(s2))
 	{
 		return (NULL); /* Overflow occurred */
 	}
