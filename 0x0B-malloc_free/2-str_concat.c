@@ -36,13 +36,8 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	/*calculate string length and check for overflow*/
-	/*len = _strlen(s1) + _strlen(s2) + 1;
-	if (len <= _strlen(s1) || len <= _strlen(s2))
-	{
-		return (NULL); /* Overflow occurred */
-	/*}*/
-
+	len = _strlen(s1) + _strlen(s2) + 1;
+	
 	/*allocate dynamic memory to string*/
 	s = malloc(len);
 
