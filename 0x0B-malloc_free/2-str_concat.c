@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	len = _strlen(s1) + _strlen(s2) + 1;
-	
+
 	/*allocate dynamic memory to string*/
 	s = malloc(len);
 
