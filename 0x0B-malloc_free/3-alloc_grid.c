@@ -11,7 +11,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **arrays;
-	int i, j;
+	int i, j, k;
 
 	/*check if function parameters are 0 or -ve*/
 	if (width <= 0 || height <= 0)
