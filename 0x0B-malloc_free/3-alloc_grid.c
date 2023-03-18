@@ -20,15 +20,25 @@ int **alloc_grid(int width, int height)
 	/*allocate dynamic memory to arrays: */
 	/*allocate memory to array of pointers*/
 	arrays = (int **)malloc(height * (sizeof(int *)));
-	/*allocate dynamic memory to array of int*/
-	for (i = 0; i < height; i++)
-	{
-		arrays[i] = (int *)malloc(width * (sizeof(int)));
-	}
 
 	/*condition for unsuccessful allocation*/
 	if (arrays == NULL)
 		return (NULL);
+
+	/*allocate dynamic memory to array of int*/
+	for (i = 0; i < height; i++)
+	{
+		arrays[i] = (int *)malloc(width * (sizeof(int)));
+
+		/*if memory allocation fails free previous memory*/
+		if (arrays[i] == NULL)
+		{
+			for (k = 0; k < i; k++)
+				free(arrays[k]);
+			free(arrays);
+			return (NULL);
+		}
+	}
 
 	/*initialise arrays to 0*/
 	for (i = 0; i < height; i++)
