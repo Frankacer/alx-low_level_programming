@@ -12,7 +12,7 @@
  *
  * Return: Always 0 (success)
  */
-int main(int argc, char *argv[])
+int main(__attribute__((unused)) int argc, char *argv[])
 {
 	/* Print the name of the program followed by a newline */
 	printf("%s\n", argv[0]);
