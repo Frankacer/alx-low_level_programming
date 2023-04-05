@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#ifndef
+#ifndef NULL
 #define NULL ((void *)0)
 
 #endif
