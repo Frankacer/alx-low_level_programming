@@ -13,7 +13,11 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
-	
+
+	/* Check for NULL inputs */
+	if (array == NULL || action == NULL)
+		return;
+
 	/* Loop over the array and apply the function to each element */
 	for (i = 0; i < size; i++)
 		action(array[i]);
