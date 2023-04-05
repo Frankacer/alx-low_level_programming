@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - Adds a new node at the end of a listint_t list.
+ * *add_nodeint_end - Adds a new node at the end of a listint_t list.
  *
  * @head: A pointer to a pointer to the head node of the list.
  * @n: The integer to be stored in the new node.
@@ -37,7 +37,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	{
 		temp = temp->next;
 	}
- 
+
 	/* Attach the new node to the last node */
 	temp->next = new_node;
 
