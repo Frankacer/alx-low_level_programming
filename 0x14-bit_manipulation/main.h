@@ -16,8 +16,6 @@ float _pow(float base, int index);
 int *rev_arr(int *num, int length);
 void swap_num(int *n1, int *n2);
 int _printf(const char *format, ...);
-int _putchar(char c);
-int _isalpha(int c);
 int print_sign(int n);
 int _abs(int i);
 int print_last_digit(int c);

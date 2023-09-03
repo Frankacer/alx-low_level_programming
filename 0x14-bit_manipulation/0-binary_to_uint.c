@@ -39,7 +39,7 @@ unsigned int binary_to_uint(const char *b)
 			i++;
 		else if (b[i] == '1')
 		{
-			result += 1 << index - i;
+			result += 1 << (index - i);
 			i++;
 		}
 		else
