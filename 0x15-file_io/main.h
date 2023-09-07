@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 #define BUFFER_SIZE 1024
 
@@ -28,7 +30,7 @@ int add(int, int);
 void print_to_98(int n);
 void print_times_table(int n);
 int multiple(int m, int n);
-unsigned int _strlen(const char *s);
+unsigned int _strlen(char *s);
 void rev_string(char *s);
 void puts2(char *str);
 void puts_half(char *str);

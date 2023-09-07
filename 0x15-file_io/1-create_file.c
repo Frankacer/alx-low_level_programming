@@ -6,7 +6,7 @@
  *
  * Return: length of string
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
 	int len = 0;
 
@@ -20,7 +20,7 @@ int _strlen(char *s)
 int create_file(const char *filename, char *text_content)
 {
 	/*declarations*/
-	int fd = 0, i = 0;
+	int fd = 0;
 	ssize_t bytes_written = 0, size = 0;
 
 	/*check if filename is NULL*/
@@ -32,7 +32,7 @@ int create_file(const char *filename, char *text_content)
 		text_content = "";
 
 	/*Open file*/
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 
 	/*Check if file was successfully opened*/
 	if (fd == -1)
